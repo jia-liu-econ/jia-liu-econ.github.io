@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Jia Liu"
 title_separator          : "-"
 name                     : &name "Jia Liu"
-description              : &description "Academic website of Jia Liu, PhD candidate in econometrics."
+description              : &description "Academic website of Jia Liu, Ph.D. candidate in Economics at the University of Auckland."
 url                      : https://jia-liu-econ.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "jia-liu-econ/jia-liu-econ.github.io"
@@ -25,11 +25,11 @@ author:
   avatar           :
   name             : "Jia Liu"
   pronouns         : # example: "she/her"  
-  bio              : "PhD candidate in econometrics"
+  bio              : "Ph.D. candidate in Economics"
   location         :
-  employer         :
+  employer         : "University of Auckland"
   uri              : # URL
-  email            :
+  email            : "jia.q.liu.econ@gmail.com"
 
   # Academic websites
   academia         : # URL
