@@ -11,7 +11,6 @@
   --hero-accent: #bad3f3;
   --hero-rule: #4d698e;
   --research-bg: #e5eef9;
-  --teaching-bg: #edf3fb;
   --serif: Georgia, "Times New Roman", serif;
   --sans: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -246,6 +245,7 @@ a {
 }
 
 .content-section {
+  background: #fff;
   padding-block: clamp(2.5rem, 6vw, 4.75rem);
 }
 
@@ -255,10 +255,6 @@ a {
 
 .research-section {
   background: var(--research-bg);
-}
-
-.teaching-section {
-  background: var(--teaching-bg);
 }
 
 .section-grid {
