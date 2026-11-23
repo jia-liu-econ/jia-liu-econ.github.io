@@ -5,7 +5,7 @@
   --muted: #405574;
   --accent: #214c80;
   --rule: #c8d7e7;
-  --hero: #102548;
+  --hero: #0c1c37;
   --hero-text: #f6f9ff;
   --hero-muted: #d3e1f3;
   --hero-accent: #bad3f3;
@@ -329,10 +329,6 @@ a {
 .availability {
   color: var(--muted);
   font-size: 0.9375rem;
-}
-
-.availability {
-  margin-top: 0.9rem;
 }
 
 .section-blocks a {
