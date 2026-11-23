@@ -26,7 +26,11 @@
       <nav aria-label="Main navigation">
         <ul class="site-nav">
           {% for item in site.data.navigation.main %}
-          <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title | escape }}</a></li>
+          {% if item.anchor %}
+          <li><a href="{% unless page.url == '/' %}{{ '/' | relative_url }}{% endunless %}#{{ item.anchor | escape }}">{{ item.title | escape }}</a></li>
+          {% else %}
+          <li><a href="{{ item.url | escape }}">{{ item.title | escape }}</a></li>
+          {% endif %}
           {% endfor %}
         </ul>
       </nav>
@@ -37,7 +41,7 @@
   </main>
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <span>{{ site.name | escape }} <span class="footer-divider" aria-hidden="true">·</span> Econometrics</span>
+      <span>{{ site.name | escape }} <span class="footer-divider" aria-hidden="true">·</span> Economics</span>
       <a href="https://github.com/{{ site.author.github }}">GitHub</a>
     </div>
   </footer>
