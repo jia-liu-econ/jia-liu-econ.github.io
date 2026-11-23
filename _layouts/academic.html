@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.url != '/' %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+  {% assign description = page.description | default: site.description %}
+  <meta name="description" content="{{ description | escape }}">
+  {% if page.sitemap == false %}
+  <meta name="robots" content="noindex">
+  {% else %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  {% endif %}
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="site-name" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>{{ site.name | escape }}</a>
+      <nav aria-label="Main navigation">
+        <ul class="site-nav">
+          {% for item in site.data.navigation.main %}
+          <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title | escape }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="content" tabindex="-1">
+    {{ content }}
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>{{ site.name | escape }} <span class="footer-divider" aria-hidden="true">·</span> Econometrics</span>
+      <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
